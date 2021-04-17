@@ -29,17 +29,20 @@
     width: 100%;
     height: 100%;
     background-color: white;
+    overflow: scroll;
 }
 
 .viewAllContent{
     position: absolute;
-    top: 10%;
+    top: 15%;    
+    width: 100%;
+    height: 85%;
 }
 
 .viewAllContent img{
-    width: 13%;
-    height: auto;
-    margin: 1% 2%;
+    width: auto;
+    height: 30%;
+    margin: 2% 3%;
 }
 
 .closeButton{
@@ -109,6 +112,9 @@
 }  
 
 @media(max-width: 800px){
+    .Slider{
+        width: 98%;
+    }
     .photos{
         margin: 5%;
         width: 90%;
@@ -143,11 +149,16 @@
     }
     .viewAllContent{
         top:15%;
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
     .viewAllContent img{
-        width: 42%;
+        width: 48%;
         height: auto;
-        margin: 3%;
+        margin: 3% 1%;
     }
 
 }

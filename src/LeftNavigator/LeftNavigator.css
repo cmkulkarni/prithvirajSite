@@ -34,8 +34,11 @@
         padding: 3%;
         flex:100%;
         max-width: 100%;
-        text-align: center;
         display: block;
         float: inherit;
+    }
+    .socialMedia{
+        text-align: center;
+        margin: 20% 3% 10% 3%;
     }
 }

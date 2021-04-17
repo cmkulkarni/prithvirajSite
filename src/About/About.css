@@ -10,13 +10,20 @@
     font-family: aTitle;
 }
 
+.aboutWrapper{
+    flex: 76%;
+    height: 100%;
+    overflow: scroll;
+    max-width: 76%;
+}
+
 .about{
     font-family: aContent;
-    max-width: 76%;
-    flex: 76%;
+    max-width: 100%;
+    flex: 100%;
     text-align: left;
     display: flex;
-    height: 63%;   
+    height: 70%;   
     padding: 10% 0% 2% 0%;
 }
 
@@ -45,10 +52,17 @@
     width: 80%;
 }
 
+.contactForm{
+    width: 100%;
+    height: 1100px;
+    padding-top: 3%;
+  }
 @media(max-width: 800px){
-    .about{
+    .aboutWrapper{
         flex:100%;
         max-width: 100%;
+    }
+    .about{
         text-align: center;
         display: block;        
         padding: 8% 5%;
@@ -58,6 +72,9 @@
         width: 90%;
         padding: 2% 5%;
     
+    }
+    .contactForm{
+      height: 1200px;
     }
     
 }

@@ -42,13 +42,10 @@ class App extends Component {
         currentPage: "Portfolio"
       });
     }
-    else if(page === "Work")
-      console.log(page);
     else if(page === "About"){
       console.log(page);
       this.contentArea = [
-        <About/>,
-        <iframe className="contactForm" src="https://docs.google.com/forms/d/e/1FAIpQLSe8s_6jTQDRsp33lByT5SqsaJERrUX6mg6dzWC-HtKhbpmaQQ/viewform?embedded=true" width="640" height="1018" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <About/>
       ];
       this.setState({
         currentPage: "About"
@@ -83,15 +80,27 @@ class App extends Component {
         currentPage: "- Landscapes & Streets"
       }); 
     }
+    else if(page === "Work"){
+      //console.log(exportObject);
+      this.setState({
+        currentPage: "Work"
+      });
+    }
     else{
       this.contentArea = (<LandingImage />);
+      this.landingPageClicked=true;
       this.setState({
         currentPage: "Home"
       });
     }
+    
+    if(page !== "Work" && window.innerWidth<800){
+      this.leftNavHandler();
+    }
   }
 
   //Menu button Handler
+  LeftNavigation;
   leftNavHandler = () => {
     var leftNav = !this.state.LeftNav;
     
@@ -102,6 +111,7 @@ class App extends Component {
 
   leftNavVar=true;
   menuButton=false;
+  landingPageClicked=false;
   width=0;
   height = 0;
   constructor(props){
@@ -115,24 +125,23 @@ class App extends Component {
     }
   }
 
-  listenScrollEvent(e){
-    console.log(e);
-  }
 
   render(){    
-    var LeftNavigation;
     if(this.leftNavVar===false){
-      LeftNavigation =(<LeftNavigator menuButton={this.menuButton} leftNavHandler={this.leftNavHandler} style={false} click={this.switchContentAreaHandle}/>);
+      this.LeftNavigation =(<LeftNavigator menuButton={this.menuButton} leftNavHandler={this.leftNavHandler} style={false} click={this.switchContentAreaHandle} homeClicked={this.landingPageClicked}/>);
       this.leftNavVar=true;
       this.setState({LeftNav: false});
     }
     else
-      LeftNavigation =(<LeftNavigator menuButton={this.menuButton} leftNavHandler={this.leftNavHandler} style={this.state.LeftNav} click={this.switchContentAreaHandle}/>);
+      this.LeftNavigation =(<LeftNavigator menuButton={this.menuButton} leftNavHandler={this.leftNavHandler} style={this.state.LeftNav} click={this.switchContentAreaHandle} homeClicked={this.landingPageClicked}/>);
+
+    if(this.landingPageClicked)
+      this.landingPageClicked=false;
 
     return (
       <div style={{width:this.width, height: this.height}} className="App">
-        <div className="AppContainer"  onScroll={this.listenScrollEvent}>
-          {LeftNavigation}
+        <div className="AppContainer" >
+          {this.LeftNavigation}
           {this.contentArea}
           {this.dialogVariable}
         </div>

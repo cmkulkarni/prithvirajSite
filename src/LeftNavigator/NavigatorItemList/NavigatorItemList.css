@@ -5,6 +5,7 @@
 
 @media(max-width: 800px){
     .NavigatorItemList{
-        padding-top: 15%;
+        padding-left: 42%;
+        padding-top: 10%;
     }
 }

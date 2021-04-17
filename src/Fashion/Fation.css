@@ -13,6 +13,8 @@
 .fashion{
     flex: 76%;
     max-width: 76%;
+    max-height: 100%;
+    overflow: scroll;
     display: flex;
     flex-wrap: wrap;
     float: inherit;   

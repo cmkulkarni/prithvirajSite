@@ -9,7 +9,7 @@ class NavigatorItemList extends Component{
         return (
             <div style={this.props.style} className="NavigatorItemList">
                 <NavigatorItem label="Portfolio" click={this.props.click}/>
-                <NavigatorShade label="Work" click={this.props.click}/>
+                <NavigatorShade label="Work" click={this.props.click} homeClicked={this.props.homeClicked}/>
                 <NavigatorItem label="About" click={this.props.click}/>
                 <NavigatorItem label="Contact" click={this.props.click}/>
             </div>

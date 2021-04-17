@@ -27,6 +27,10 @@ class navigatorShade extends Component {
     }
 
     render(){
+        if(this.props.homeClicked){
+            this.shade = null;
+        }
+
         return(
             <div className="NavigatorShade">
                 <p onClick={this.clickHandler}>{this.props.label}</p>

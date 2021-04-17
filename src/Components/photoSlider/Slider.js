@@ -12,15 +12,10 @@ class Slider extends Component {
     };
     images = null;
     viewAll = false;
-    indexSize=10;
-    PageNumber="";
     lengthOfAllIMages=0;
 
     constructor(props){
         super(props);
-
-        if(window.innerWidth<800)
-            this.indexSize=4;
         
         var viewAll = !this.state.viewAll;
         var allImages=[];
@@ -57,13 +52,9 @@ class Slider extends Component {
 
         if(clickLoc > width/2){
             index++;
-            if(this.state.viewAll)
-                this.changeViewIndex(this.indexSize);
         }
         else{
             index--;
-            if(this.state.viewAll)
-                this.changeViewIndex(-this.indexSize)
         }
         
         var imgStyle = "singlePhoto";
@@ -99,13 +90,9 @@ class Slider extends Component {
 
         if(clickDirection === "right"){
             index++;
-            if(this.state.viewAll)
-                this.changeViewIndex(this.indexSize);
         }
         else{
             index--;
-            if(this.state.viewAll)
-                this.changeViewIndex(-this.indexSize)
         }
         
         var imgStyle = "singlePhoto";
@@ -205,23 +192,19 @@ class Slider extends Component {
 
         if(this.state.viewAll){
             var imagesToView = [];
-            for(var i=this.state.viewAllIndex;i<this.state.viewAllIndex+this.indexSize;i++){
+            for(var i = 0 ; i < this.state.allImages.length ; i++){
                 imagesToView.push(this.state.allImages[i]);
                 if(this.state.allImages[i+1] === undefined) {
                     break;
                 }
             }
-            var currentPage = this.state.viewAllIndex<0?(-1*this.state.viewAllIndex):this.state.viewAllIndex+this.indexSize;
-            this.PageNumber=this.state.viewAllIndex+"..."+currentPage+"/"+this.state.viewAllContentLength
-
             content = [
-                <button key='1' className='leftButton' onClick={this.slideClickHandler.bind(this,"left")}>Previous</button>,
+                //<button key='1' className='leftButton' onClick={this.slideClickHandler.bind(this,"left")}>Previous</button>,
                 <div key='2' className='viewAllContent'>{imagesToView}</div>,
-                <button key='3' className='rightButton' onClick={this.slideClickHandler.bind(this,"right")}>Next</button>
+                //<button key='3' className='rightButton' onClick={this.slideClickHandler.bind(this,"right")}>Next</button>
             ];
         }
-        else{
-            this.PageNumber=this.state.sliderIndex;
+        else{            
 
             content = [
                 <button key='1' className='leftButton' onClick={this.slideClickHandler.bind(this,"left")}>Previous</button>,
@@ -235,8 +218,7 @@ class Slider extends Component {
             <div className='Slider' onClick={this.Click.bind(this)}>
                 <div className='photos'>
                     <button className='closeButton' onClick={this.props.closeClick}>Close</button>
-                    <button className='viewAllButton' onClick={this.viewAllClick.bind(this)}>{this.state.viewAllLabel}</button>,
-                    <p className="Page">{this.PageNumber}</p>
+                    <button className='viewAllButton' onClick={this.viewAllClick.bind(this)}>{this.state.viewAllLabel}</button>
                     {content}
                 </div>
             </div>        
