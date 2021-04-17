@@ -20,6 +20,13 @@
     float: inherit;   
     padding: 10% 0% 20% 0%;
     justify-content: center;
+    
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.fashion::-webkit-scrollbar {
+    display: none;
 }
 
 @media(max-width: 800px){

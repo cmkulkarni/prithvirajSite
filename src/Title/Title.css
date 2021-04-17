@@ -1,10 +1,7 @@
-@font-face {
-    font-family: titleFont;
-    src: url(Sanlulus.otf);
-}
+
 
 .TitleSite{
-    font-family: titleFont;
+    font-family: bol;
     padding-top: 3%;
     padding-left: 4%;
     font-size: larger;

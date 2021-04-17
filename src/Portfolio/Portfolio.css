@@ -1,14 +1,22 @@
 
 .PortfolioRow{
-    flex: 75%;
-    max-width: 75%;
+    flex: 76%;
+    max-width: 76%;
     max-height: 80%;
     overflow: scroll;
     display: flex;
     flex-wrap: wrap;
     padding: 10% 0% 1% 0%;
     float: inherit;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
+
+.PortfolioRow::-webkit-scrollbar {
+    display: none;
+}
+
 .title{
     position: absolute;
     right: 35%;

@@ -1,10 +1,5 @@
-@font-face {
-    font-family: myFirstFont;
-    src: url(MomcakeThin.otf);
-}
-
 .NavigatorShade{
-    font-family: myFirstFont;
+    font-family: lig;
     padding-left: 3%;
     font-size: x-large;
 }

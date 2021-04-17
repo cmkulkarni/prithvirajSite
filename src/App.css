@@ -1,6 +1,15 @@
+
 @font-face {
-  font-family: menuF;
-  src: url(MomcakeThin.otf);
+  font-family: lig;
+  src: url(Fonts/Raleway-ExtraLight.ttf);
+}
+@font-face {
+  font-family: reg;
+  src: url(Fonts/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: bol;
+  src: url(Fonts/Raleway-Bold.ttf);
 }
 
 

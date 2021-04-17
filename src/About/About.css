@@ -1,13 +1,5 @@
-@font-face {
-    font-family: aTitle;
-    src: url(MomcakeThin.otf);
-}
-@font-face {
-    font-family: aContent;
-    src: url(TexgyrebonumRegular.otf);
-}
 .titleA{
-    font-family: aTitle;
+    font-family: reg;
 }
 
 .aboutWrapper{
@@ -15,10 +7,18 @@
     height: 100%;
     overflow: scroll;
     max-width: 76%;
+    
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
+.aboutWrapper::-webkit-scrollbar {
+    display: none;
+}
+
+
 .about{
-    font-family: aContent;
+    font-family: reg;
     max-width: 100%;
     flex: 100%;
     text-align: left;

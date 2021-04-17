@@ -49,7 +49,7 @@
     top: 3%;
     right: 3%;
     position: absolute;
-    
+    font-family: lig;    
     box-shadow: none;
     border: none;
     text-shadow: none;
@@ -61,7 +61,7 @@
     top: 3%;
     right: 10%;
     position: absolute;
-    
+    font-family: lig;    
     box-shadow: none;
     border: none;
     text-shadow: none;
@@ -72,6 +72,7 @@
 .leftButton{
     font-size: large;
     position: absolute;
+    font-family: lig;
     height: 10%;
     bottom: 2%;
     left: 2%;
@@ -83,6 +84,7 @@
 .rightButton{
     font-size: large;
     position: absolute;
+    font-family: lig;
     height: 10%;
     bottom: 2%;
     right: 2%;
