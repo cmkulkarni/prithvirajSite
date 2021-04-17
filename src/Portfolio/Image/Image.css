@@ -1,0 +1,30 @@
+.ImageColmn{
+    flex:44%;
+    max-width: 44%;
+}
+
+.imageContainer{
+    width:100%;
+    padding:8% 0% 8% 16%;
+    vertical-align: middle;
+    height: 5%;
+}
+
+.image{
+    width: 85%;
+    height: auto;
+}
+
+.image:hover{
+    border : 1px solid gray;
+    padding: 23px 2px;
+}
+
+@media(max-width: 800px){
+    .ImageColmn{
+        flex:48%;
+        max-width: 48%;
+        padding-top: 1%;
+        padding-right: 1%;
+    }
+}

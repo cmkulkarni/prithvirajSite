@@ -1,0 +1,21 @@
+@font-face {
+    font-family: a;
+    src: url(MomcakeThin.otf);
+}
+
+.Item{
+    font-family: a;
+    padding-left: 3%;
+    font-size: x-large;
+}
+
+.Item:hover{
+    cursor: pointer;
+}
+
+
+@media(max-width: 800px){
+    .Item{
+        font-size: large;
+    }    
+}

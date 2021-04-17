@@ -1,0 +1,30 @@
+.LandingImage{
+    flex: 76%;
+    max-width: 76%;
+    display: flex;
+    flex-wrap: wrap;
+    float: inherit;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageLanding{
+    height: 55%;
+}
+
+@media(max-width: 800px){
+    .LandingImage{
+        flex:100%;
+        max-width: 100%;
+        text-align: center;
+        display: inline-flex;
+        padding: 10% 0%;
+    }
+    .imageLanding{
+        width: 95%;
+        height: auto;
+        padding: 1%;
+    }
+}
+

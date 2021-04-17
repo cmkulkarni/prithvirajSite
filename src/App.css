@@ -1,0 +1,28 @@
+@font-face {
+  font-family: menuF;
+  src: url(MomcakeThin.otf);
+}
+
+
+.AppContainer {
+  display: flex;
+  height: 100%;
+  width: 98%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contactForm{
+  width: 100%;
+  padding-top: 3%;
+}
+@media(max-width: 800px){
+  .AppContainer{
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+  .contactForm{
+    height: 1100px;
+  }
+}

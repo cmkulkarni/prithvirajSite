@@ -1,0 +1,41 @@
+.LeftNavigator{
+    height: 75%;
+    flex: 21%;
+    max-width: 21%;
+    text-align: left;
+    padding: 1% 0% 0% 3%;
+}
+
+.socialMedia{
+    margin: 20% 3%;
+}
+.fb{
+    width: 15%;
+    padding-left: 2%;
+}
+.insta{
+    width:11%
+}
+
+.Menu{
+    font-family: menuF;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
+    background: none;
+    font-size: x-large;
+  }
+
+@media(max-width: 800px){
+    .LeftNavigator{
+        padding: 3%;
+        flex:100%;
+        max-width: 100%;
+        text-align: center;
+        display: block;
+        float: inherit;
+    }
+}

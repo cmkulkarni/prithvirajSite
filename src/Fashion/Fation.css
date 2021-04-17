@@ -1,0 +1,32 @@
+@font-face {
+    font-family: aTitle;
+    src: url(MomcakeThin.otf);
+}
+.Ftitle{
+    font-family: aTitle;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: large;
+}
+
+.fashion{
+    flex: 76%;
+    max-width: 76%;
+    display: flex;
+    flex-wrap: wrap;
+    float: inherit;   
+    padding: 10% 0% 20% 0%;
+    justify-content: center;
+}
+
+@media(max-width: 800px){
+    .fashion{
+        padding-top: 10%;
+        flex:100%;
+        max-width: 100%;
+        text-align: center;
+        display: inline-flex;   
+        padding: 8% 0%;
+    }
+}

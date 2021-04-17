@@ -1,0 +1,153 @@
+.photos{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    z-index: 1;
+    text-align: center;
+}
+
+.Page{
+    top: 0%;
+    right: 48%;
+    position: absolute;
+}
+
+.photosHolder{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Slider{
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.viewAllContent{
+    position: absolute;
+    top: 10%;
+}
+
+.viewAllContent img{
+    width: 13%;
+    height: auto;
+    margin: 1% 2%;
+}
+
+.closeButton{
+    top: 3%;
+    right: 3%;
+    position: absolute;
+    
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
+    background: none;
+    font-size: large;
+}
+
+.viewAllButton{
+    top: 3%;
+    right: 10%;
+    position: absolute;
+    
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
+    background: none;
+    font-size: large;
+}
+
+.leftButton{
+    font-size: large;
+    position: absolute;
+    height: 10%;
+    bottom: 2%;
+    left: 2%;
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
+    background: none;
+}
+.rightButton{
+    font-size: large;
+    position: absolute;
+    height: 10%;
+    bottom: 2%;
+    right: 2%;
+    box-shadow: none;
+    border: none;
+    text-shadow: none;
+    background: none;
+}
+
+.singlePhoto{
+    width: auto;
+    height: 75%; 
+    display: block;
+    padding: 1%;
+}
+.doublePhotos{
+    width: auto;
+    height: 75%;
+    display: block;
+    padding: 1%;
+}
+.triplePhotos{
+    width: 30%;
+    height: auto;
+    display: block;
+    padding: 1%;
+}  
+
+@media(max-width: 800px){
+    .photos{
+        margin: 5%;
+        width: 90%;
+    }  
+    .singlePhoto{
+        width: 100%;
+        height: auto; 
+    }
+    .doublePhotos{
+        width: 49%;
+        height: auto;
+    }
+    .triplePhotos{
+        width: 30%;
+        height: auto;
+    }  
+    .closeButton{
+        top: 5%;
+        right: 2%;
+    }
+    .viewAllButton{
+        top: 5%;
+        right: 20%;
+    }
+    .leftButton{
+        bottom: 2%;
+        left: 2%;
+    }
+    .rightButton{
+        bottom: 2%;
+        right: 2%;
+    }
+    .viewAllContent{
+        top:15%;
+    }
+    .viewAllContent img{
+        width: 42%;
+        height: auto;
+        margin: 3%;
+    }
+
+}

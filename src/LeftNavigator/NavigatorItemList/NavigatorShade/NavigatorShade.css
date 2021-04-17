@@ -1,0 +1,21 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(MomcakeThin.otf);
+}
+
+.NavigatorShade{
+    font-family: myFirstFont;
+    padding-left: 3%;
+    font-size: x-large;
+}
+
+.NavigatorShade:hover{
+    cursor: pointer;
+}
+
+
+@media(max-width: 800px){
+    .NavigatorShade{
+        font-size: large;
+    }    
+}

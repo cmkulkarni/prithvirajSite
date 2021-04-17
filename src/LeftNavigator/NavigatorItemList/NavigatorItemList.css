@@ -1,0 +1,10 @@
+.NavigatorItemList{
+    padding-left: 3%;
+    padding-top: 20%;
+}
+
+@media(max-width: 800px){
+    .NavigatorItemList{
+        padding-top: 15%;
+    }
+}
