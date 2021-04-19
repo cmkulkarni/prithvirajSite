@@ -15,8 +15,9 @@
     padding: 10%;
 }
 .Series p{
+    font-family: reg;
     text-align: center;
-    font-size: x-small;
+    font-size: medium;
     margin: 5% 10%;
 }
 

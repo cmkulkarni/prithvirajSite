@@ -1,7 +1,8 @@
 .LeftNavigator{
+    font-family: lig;
     height: 75%;
-    flex: 21%;
-    max-width: 21%;
+    flex: 33%;
+    max-width: 33%;
     text-align: left;
     padding: 1% 0% 0% 3%;
 }

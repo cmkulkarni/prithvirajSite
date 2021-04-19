@@ -20,7 +20,7 @@ class Series extends Component{
                     }
                     src = {seriesTopImage}
                 />
-                <p>{this.props.description}</p>
+                <p style={{fontsize:"medium"}}>{this.props.description}</p>
             </div>
         );
     }

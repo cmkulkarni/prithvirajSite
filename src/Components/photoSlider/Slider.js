@@ -150,6 +150,9 @@ class Slider extends Component {
         if(viewAll){
             label="Single View"
         }
+        else{
+
+        }
 
         this.props.series.map(function(v){    
             if(Array.isArray(v))
@@ -160,12 +163,17 @@ class Slider extends Component {
                 allImages.push(<img key={imgSeriesIndex++} src={v}/>)
         });
 
+        this.images=null;
+
         this.setState({
             viewAll: viewAll,
             viewAllContentLength: allImages.length,
             allImages: allImages,
-            viewAllLabel: label
+            viewAllLabel: label,
+            sliderIndex: 0
         });
+
+
     }   
 
     render(){
@@ -199,23 +207,21 @@ class Slider extends Component {
                 }
             }
             content = [
-                //<button key='1' className='leftButton' onClick={this.slideClickHandler.bind(this,"left")}>Previous</button>,
-                <div key='2' className='viewAllContent'>{imagesToView}</div>,
-                //<button key='3' className='rightButton' onClick={this.slideClickHandler.bind(this,"right")}>Next</button>
+                <div key='2' className='viewAllContent'>{imagesToView}</div>
             ];
         }
         else{            
 
             content = [
                 <button key='1' className='leftButton' onClick={this.slideClickHandler.bind(this,"left")}>Previous</button>,
-                <div key='2' className='photosHolder'>{imageList}</div>,
+                <div key='2' className='photosHolder' onClick={this.Click.bind(this)}>{imageList}</div>,
                 <button key='3' className='rightButton' onClick={this.slideClickHandler.bind(this,"right")}>Next</button>
             ];
         }
 
 
         return(
-            <div className='Slider' onClick={this.Click.bind(this)}>
+            <div className='Slider' >
                 <div className='photos'>
                     <button className='closeButton' onClick={this.props.closeClick}>Close</button>
                     <button className='viewAllButton' onClick={this.viewAllClick.bind(this)}>{this.state.viewAllLabel}</button>

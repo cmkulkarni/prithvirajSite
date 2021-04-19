@@ -1,12 +1,9 @@
-.titleA{
-    font-family: reg;
-}
 
 .aboutWrapper{
-    flex: 76%;
-    height: 100%;
+    flex: 64%;
+    height: 85%;
     overflow: scroll;
-    max-width: 76%;
+    max-width: 64%;
     
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -24,7 +21,7 @@
     text-align: left;
     display: flex;
     height: 70%;   
-    padding: 10% 0% 2% 0%;
+    padding: 10% 0% 0% 0%;
 }
 
 .description{

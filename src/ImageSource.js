@@ -373,7 +373,8 @@ var portfolioArray2 = [img10, img11, img12, img13, img14, img15, img16, img17, i
 
 var Portraits = [
     {
-        series: [[portraite1o1,portraite1o2],[portraite2o1,portraite2o2],[portraite3o1,portraite3o2],[portraite4o1,portraite4o2], [portraite5o1, portraite502], [portraite6o1, portraite6o2], [portraite7o1, portraite7o2], [portraite8o1, portraite8o2], [portraite9o1,portraite9o2], [portraite10o1, portraite10o2], portraite11, portraite12, portraite13, portraite14, portraite15, portraite16, portraite17, portraite18, portraite19],
+        series: [[portraite1o1,portraite1o2],[portraite2o1,portraite2o2],[portraite3o1,portraite3o2],[portraite4o1,portraite4o2], [portraite5o1, portraite502], [portraite6o1, portraite6o2], [portraite7o1, portraite7o2], [portraite8o1, portraite8o2], [portraite9o1,portraite9o2], [portraite10o1, portraite10o2], portraite11, portraite12, portraite13, portraite14, portraite15, portraite16, portraite17, portraite18],
+        array: [[portraite1o1,portraite2o1,portraite3o1,portraite4o1,portraite5o1,portraite6o1,portraite7o1,portraite8o1,portraite9o1,portraite10o1,portraite11,portraite13,portraite15,portraite17],[portraite1o2, portraite2o2,portraite3o2,portraite4o2,portraite502,portraite6o2,portraite7o2,portraite8o2,portraite9o2,portraite10o2,portraite12,portraite14,portraite16,portraite18, portraite19]],
         description: "Portraits"
     }
 ];

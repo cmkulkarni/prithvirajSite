@@ -21,7 +21,7 @@ const leftNavigator = (props) => {
                 {buttonMenu}
             </div>       
             <div style={style}>  
-                <NavigatorItemList click={props.click} homeClicked={props.homeClicked}/>
+                <NavigatorItemList click={props.click} homeClicked={props.homeClicked} currentPage={props.currentPage}/>
                 <div className="socialMedia">
                     <a href="https://www.facebook.com/Pr1thviraj.Chavan/" target="_blank">
                         <img className="fb" src={facebookLog}/>

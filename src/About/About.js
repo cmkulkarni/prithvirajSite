@@ -8,7 +8,6 @@ const about =(props) => {
         <div class="aboutWrapper">
             <div className="about">
                 <div className="description">
-                    <h1 className="titleA">About</h1>
                     <p>I am Prithviraj.</p>
                     <p>Currently based in Pune, India.</p>
                     <p>I primarily shoot Fashion and Portraiture but also find myself exploring and indulging in places and experiences around the world when travelling for work or leisure.</p>

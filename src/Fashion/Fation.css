@@ -11,15 +11,14 @@
 }
 
 .fashion{
-    flex: 76%;
-    max-width: 76%;
-    max-height: 76%;
+    flex: 64%;
+    max-width: 64%;
+    max-height: 64%;
     overflow: scroll;
     display: flex;
     flex-wrap: wrap;
     float: inherit;   
     padding: 10% 0% 20% 0%;
-    justify-content: center;
     
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */

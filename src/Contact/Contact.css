@@ -1,7 +1,8 @@
 
 .contact{
-    max-width: 76%;
-    flex: 76%;
+    font-family: 'reg';
+    max-width: 64%;
+    flex: 64%;
     max-height: 100%;
     text-align: center;
     display: flex;

@@ -68,7 +68,7 @@ class App extends Component {
     }
     else if(page === "- Portraits"){
       console.log(exportObject);
-      this.contentArea = (<Fashion click={this.dialogHandler} app={this} series={exportObject.Portraits}/>);
+      this.contentArea = (<Portfolio click={this.dialogHandler} app={this} images={exportObject.Portraits[0].array}/>);
       this.setState({
         currentPage: "- Portraits"
       }); 
@@ -128,12 +128,12 @@ class App extends Component {
 
   render(){    
     if(this.leftNavVar===false){
-      this.LeftNavigation =(<LeftNavigator menuButton={this.menuButton} leftNavHandler={this.leftNavHandler} style={false} click={this.switchContentAreaHandle} homeClicked={this.landingPageClicked}/>);
+      this.LeftNavigation =(<LeftNavigator menuButton={this.menuButton} leftNavHandler={this.leftNavHandler} style={false} click={this.switchContentAreaHandle} homeClicked={this.landingPageClicked} currentPage={this.state.currentPage}/>);
       this.leftNavVar=true;
       this.setState({LeftNav: false});
     }
     else
-      this.LeftNavigation =(<LeftNavigator menuButton={this.menuButton} leftNavHandler={this.leftNavHandler} style={this.state.LeftNav} click={this.switchContentAreaHandle} homeClicked={this.landingPageClicked}/>);
+      this.LeftNavigation =(<LeftNavigator menuButton={this.menuButton} leftNavHandler={this.leftNavHandler} style={this.state.LeftNav} click={this.switchContentAreaHandle} homeClicked={this.landingPageClicked} currentPage={this.state.currentPage}/>);
 
     if(this.landingPageClicked)
       this.landingPageClicked=false;
