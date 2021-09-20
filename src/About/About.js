@@ -6,6 +6,7 @@ const about =(props) => {
    
     return(
         <div class="aboutWrapper">
+             
             <div className="about">
                 <div className="description">
                     <p>I am Prithviraj.</p>
@@ -19,9 +20,13 @@ const about =(props) => {
                     <p>Photography for me is about creating thought provoking pictures and trying to get the best out of people.</p>
                     <p>There is no better feeling than creating a visual that excites me and allows memories to be made in the process of it.</p>
                 </div>
-                <img className="author" src={prithvi} alt="Prithviraj"></img>
-            </div>
-            <iframe className="contactForm" src="https://docs.google.com/forms/d/e/1FAIpQLSe8s_6jTQDRsp33lByT5SqsaJERrUX6mg6dzWC-HtKhbpmaQQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <img alt="prithviraj chavan photographer, Fashion, landscape, people, streets, portraits" className="author" src={prithvi}></img>
+            </div>        
+
+            <div className="contactInfo">
+                <p key='1'>Contact No.: 9665007082</p>
+                <p key='2'>Mail Id.: contact.prithvirajchavan@gmail.com</p>
+            </div> 
         </div>
     );
 };

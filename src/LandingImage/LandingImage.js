@@ -25,21 +25,29 @@ class LandingImage extends Component{
 
     constructor(props){
         super(props);
-        //if(window.innerWidth<800)
+        //if(window.innerWidth<1000)
            // this.display=1;
         //else{
-            this.display=0;
-            this.corousel();
+        this.display=0;
+        this.slideImages.forEach(function(image){
+            var image_var = new Image();
+            image_var.onload = function(e){
+                console.log("Image Loaded");
+            };
+            image_var.src = image;
+        });
+        this.corousel();
+
         //}
     }
 
     render(){
-        var image=<img className='imageLanding' src={this.slideImages[this.state.index]}/>;
+        var image=<img alt="Portraits, Fashion, people, prithviraj chavan" className='imageLanding' src={this.slideImages[this.state.index]}/>;
         if(this.display===1){
             image = [];
             var slide = this.slideImages;
-            this.slideImages.map(function(v,k){
-                image.push(<img key={k} className='imageLanding' src={slide[k]}/>);
+            this.slideImages.forEach(function(v,k){
+                image.push(<img alt="Portraits, Fashion, people" key={k} className='imageLanding' src={slide[k]}/>);
             });
         }
 

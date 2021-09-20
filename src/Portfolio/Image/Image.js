@@ -8,15 +8,17 @@ const Image = (props) => {
         columnImage.push(  
             <div className="imageContainer">          
             <img 
+                alt="prithviraj chavan portfolio, fashion, style, poeple, portraits, landscape, street"
                 onClick={
                     props.click.bind(
                         props.app,
-                        {page: "Portfolio", series:props.series}
+                        {page: "Portfolio", series:props.series, src: props.images[i]}
                     )
                 }
                 key = {i}
                 src = {props.images[i]} 
                 className="image"
+                style={{width: props.width}}
             />
             </div>
         );

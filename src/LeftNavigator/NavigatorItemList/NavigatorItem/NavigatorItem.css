@@ -1,5 +1,11 @@
 .Item{
-    padding-left: 3%;
+    padding-left: 5%;
+    padding-bottom: 4%;
+}
+
+.ItemLink{
+    text-decoration: none;
+    color: black;
     font-size: x-large;
 }
 
@@ -8,8 +14,10 @@
 }
 
 
-@media(max-width: 800px){
+@media(max-width: 1000px){
     .Item{
         font-size: large;
+        padding-left: 5%;
+        padding-bottom: 10%;
     }    
 }

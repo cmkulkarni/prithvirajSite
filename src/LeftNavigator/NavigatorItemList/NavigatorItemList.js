@@ -8,10 +8,10 @@ class NavigatorItemList extends Component{
     render(){
         return (
             <div style={this.props.style} className="NavigatorItemList">
-                <NavigatorItem label="Portfolio" click={this.props.click} currentPage={this.props.currentPage}/>
-                <NavigatorShade label="Work" click={this.props.click} homeClicked={this.props.homeClicked} currentPage={this.props.currentPage}/>
-                <NavigatorItem label="About" click={this.props.click} currentPage={this.props.currentPage}/>
-                <NavigatorItem label="Contact" click={this.props.click} currentPage={this.props.currentPage}/>
+                <NavigatorItem to="/Portfolio" label="Portfolio" click={this.props.click} currentPage={this.props.currentPage}/>
+                <NavigatorShade to="/Work" label="Work" click={this.props.click} homeClicked={this.props.homeClicked} currentPage={this.props.currentPage}/>
+                <NavigatorItem to="About" label="About" click={this.props.click} currentPage={this.props.currentPage}/>
+                <NavigatorItem to="Contact" label="Contact" click={this.props.click} currentPage={this.props.currentPage}/>
             </div>
         );
     }

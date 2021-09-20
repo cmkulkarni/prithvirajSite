@@ -1,18 +1,26 @@
 
 .TitleSite{
     font-family: bol;
-    padding-top: 3%;
+    padding-top: 10%;
+    padding-left: 5%;
     font-size: medium;
     flex: 100%;
     max-width: 100%;
     text-align: left;
 }
 
+.TitleClass{
+    font-family: bol;
+    text-decoration: none;
+    color: black;
+    font-size: xx-large;
+}
+
 .TitleSite:hover{
     cursor: pointer;
 }
 
-@media(max-width: 800px){
+@media(max-width: 1000px){
     .TitleSite{
         flex: 50%;
         max-width: 50%;

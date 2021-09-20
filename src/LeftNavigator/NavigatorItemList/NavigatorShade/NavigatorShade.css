@@ -1,15 +1,22 @@
 .NavigatorShade{
-    padding-left: 3%;
-    font-size: x-large;
+    padding-left: 5%;
+    font-size: xx-large;
+    padding-bottom: 4%;
 }
 
 .NavigatorShade:hover{
     cursor: pointer;
 }
 
+.ShadeLink{
+	text-decoration: none;
+    color: black;
+    font-size: x-large;
+}
 
-@media(max-width: 800px){
+@media(max-width: 1000px){
     .NavigatorShade{
         font-size: large;
+        padding-bottom: 10%; 
     }    
 }

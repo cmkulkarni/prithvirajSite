@@ -6,7 +6,7 @@
     overflow: scroll;
     display: flex;
     flex-wrap: wrap;
-    padding: 10% 0% 1% 0%;
+    padding: 5% 0% 1% 0%;
     float: inherit;
 
     -ms-overflow-style: none;  /* IE and Edge */
@@ -21,7 +21,7 @@
     position: absolute;
     right: 35%;
 }
-@media(max-width: 800px){
+@media(max-width: 1000px){
     .PortfolioRow{
         padding: 1% 0;
         flex:100%;

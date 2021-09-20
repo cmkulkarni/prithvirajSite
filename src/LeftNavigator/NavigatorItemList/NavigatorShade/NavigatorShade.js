@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import {
+  Link
+} from "react-router-dom";
+
 import "./NavigatorShade.css";
 import NavigatorItem from '../NavigatorItem/NavigatorItem';
 
@@ -24,9 +28,9 @@ class navigatorShade extends Component {
         }
         else{
             this.shade = [
-                            <NavigatorItem key='1' label="- Fashion & People" click={this.props.click} currentPage={this.props.currentPage}/>,
-                            <NavigatorItem key='2' label="- Portraits" click={this.props.click} currentPage={this.props.currentPage}/>,
-                            <NavigatorItem key='3' label="- Landscapes & Streets" click={this.props.click} currentPage={this.props.currentPage}/>,
+                            <NavigatorItem to="FashionAndPeople" key='1' label="- Fashion & People" click={this.props.click} currentPage={this.props.currentPage}/>,
+                            <NavigatorItem to="Portraits" key='2' label="- Portraits" click={this.props.click} currentPage={this.props.currentPage}/>,
+                            <NavigatorItem to="LandscapesAndStreets" key='3' label="- Landscapes & Streets" click={this.props.click} currentPage={this.props.currentPage}/>,
             ];
         }
 
@@ -36,7 +40,7 @@ class navigatorShade extends Component {
 
         return(
             <div className="NavigatorShade">
-                <p onClick={this.clickHandler}>{this.props.label}</p>
+                <Link to={this.props.to} onClick={this.clickHandler} className="ShadeLink">{this.props.label}</Link>
                 {this.shade}
             </div>
         );

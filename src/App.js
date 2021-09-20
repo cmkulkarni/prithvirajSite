@@ -1,12 +1,21 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react';import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
 import './App.css';
+
 import LeftNavigator from './LeftNavigator/LeftNavigator';
+
 import LandingImage from './LandingImage/LandingImage';
 import Portfolio from './Portfolio/Portfolio';
 import About from './About/About.js';
 import Fashion from './Fashion/Fashion.js';
-import Slider from './Components/photoSlider/Slider.js';
 import Contact from './Contact/Contact';
+
+import Slider from './Components/photoSlider/Slider.js';
+
 import exportObject from './ImageSource.js';
 
 class App extends Component {
@@ -14,7 +23,7 @@ class App extends Component {
     currentPage : "Home",
     LeftNav: true
   };
-
+  contentArea=(<LandingImage />);
   //For image pop up dialog
   dialogVariable = null;
   dialogHandler(obj){
@@ -22,6 +31,8 @@ class App extends Component {
     this.dialogVariable = <Slider 
                             closeClick={this.dialogCloseHandler.bind(this,"")} 
                             series={obj.series}
+                            src={obj.src}
+                            index={obj.series.indexOf(obj.src)}
                           />;
     this.setState({
       currentPage: obj.page
@@ -34,48 +45,50 @@ class App extends Component {
     });
   }
 
-  contentArea = (<LandingImage />)  
+  changeContentPage = function(page){
+    // this.setState({
+    //   currentPage: page
+    // });
+    alert(page);
+  };
+ 
   switchContentAreaHandle = (page) => {
+
+
+
     if(page === "Portfolio"){
-      this.contentArea = (<Portfolio click={this.dialogHandler} app={this} images={exportObject.portfolios}/>);
+      this.contentArea=(<Portfolio click={this.dialogHandler} app={this} images={exportObject.portfolios} width="85%"/>);
       this.setState({
         currentPage: "Portfolio"
       });
     }
     else if(page === "About"){
-      console.log(page);
-      this.contentArea = [
-        <About/>
-      ];
+      this.contentArea=(<About/>);
       this.setState({
         currentPage: "About"
       });
     }
     else if (page === "Contact"){
-      console.log(page);
-      this.contentArea = [
-        <Contact key="1"/>
-      ];
+      this.contentArea=(<Contact key="1"/>);
       this.setState({
         currentPage: "Contact"
       });
     }
     else if(page === "- Fashion & People"){
-      this.contentArea = (<Fashion click={this.dialogHandler} app={this} series={exportObject.Images_Fashion}/>);
+      this.contentArea=(<Fashion click={this.dialogHandler} app={this} series={exportObject.Images_Fashion}/>);
       this.setState({
         currentPage: "- Fashion & People"
       }); 
     }
     else if(page === "- Portraits"){
-      console.log(exportObject);
-      this.contentArea = (<Portfolio click={this.dialogHandler} app={this} images={exportObject.Portraits[0].array}/>);
+      this.contentArea=(<Portfolio click={this.dialogHandler} app={this} images={exportObject.Portraits[0].array} width="60%"/>);
       this.setState({
         currentPage: "- Portraits"
       }); 
     }
     else if(page === "- Landscapes & Streets"){
-      console.log(exportObject);
-      this.contentArea = (<Fashion click={this.dialogHandler} app={this} series={exportObject.Landscapes}/>);
+      
+      this.contentArea=(<Fashion click={this.dialogHandler} app={this} series={exportObject.Landscapes}/>);
       this.setState({
         currentPage: "- Landscapes & Streets"
       }); 
@@ -87,14 +100,15 @@ class App extends Component {
       });
     }
     else{
-      this.contentArea = (<LandingImage />);
+      
+      this.contentArea=(<LandingImage />);
       this.landingPageClicked=true;
       this.setState({
         currentPage: "Home"
       });
     }
     
-    if(page !== "Work" && window.innerWidth<800){
+    if(page !== "Work" && window.innerWidth<1000){
       this.leftNavHandler();
     }
   }
@@ -119,7 +133,21 @@ class App extends Component {
     this.height = window.innerHeight;
     this.width = window.innerWidth-20;
 
-    if(window.innerWidth<800){
+    var a = window.location.href.split("/");
+    if(a.length>4){
+      a.splice(3,1);
+      window.location.href = a.join("/");
+    }
+
+    exportObject.allImages.forEach(function(img){
+      var image_var = new Image();
+      image_var.onload = function(e){
+          console.log("Image Loaded");
+      };
+      image_var.src = img;
+    });
+
+    if(window.innerWidth<1000){
       this.leftNavVar=false;
       this.menuButton=true;
     }
@@ -128,12 +156,12 @@ class App extends Component {
 
   render(){    
     if(this.leftNavVar===false){
-      this.LeftNavigation =(<LeftNavigator menuButton={this.menuButton} leftNavHandler={this.leftNavHandler} style={false} click={this.switchContentAreaHandle} homeClicked={this.landingPageClicked} currentPage={this.state.currentPage}/>);
+      this.LeftNavigation =(<LeftNavigator changeContentPage={this.changeContentPage} menuButton={this.menuButton} leftNavHandler={this.leftNavHandler} click={this.switchContentAreaHandle} homeClicked={this.landingPageClicked} currentPage={this.state.currentPage}/>);
       this.leftNavVar=true;
       this.setState({LeftNav: false});
     }
     else
-      this.LeftNavigation =(<LeftNavigator menuButton={this.menuButton} leftNavHandler={this.leftNavHandler} style={this.state.LeftNav} click={this.switchContentAreaHandle} homeClicked={this.landingPageClicked} currentPage={this.state.currentPage}/>);
+      this.LeftNavigation =(<LeftNavigator changeContentPage={this.changeContentPage} menuButton={this.menuButton} leftNavHandler={this.leftNavHandler} style={this.state.LeftNav} click={this.switchContentAreaHandle} homeClicked={this.landingPageClicked} currentPage={this.state.currentPage}/>);
 
     if(this.landingPageClicked)
       this.landingPageClicked=false;
@@ -141,9 +169,48 @@ class App extends Component {
     return (
       <div style={{width:this.width, height: this.height}} className="App">
         <div className="AppContainer" >
-          {this.LeftNavigation}
-          {this.contentArea}
-          {this.dialogVariable}
+          <Router>
+            {this.LeftNavigation}
+            
+            <Switch>
+
+              <Route exact path="/">
+                <LandingImage />
+              </Route>
+              
+              <Route path="/Portfolio">
+                <Portfolio click={this.dialogHandler} app={this} images={exportObject.portfolios} width="85%"/>
+              </Route>
+
+              <Route path="/Work">
+                {this.contentArea}
+              </Route>
+
+              <Route path="/FashionAndPeople">
+                <Fashion click={this.dialogHandler} app={this} series={exportObject.Images_Fashion}/>
+              </Route>
+
+              <Route path="/Portraits">
+                <Portfolio click={this.dialogHandler} app={this} images={exportObject.Portraits[0].array} width="60%"/>
+              </Route>
+
+              <Route path="/LandscapesAndStreets">
+                <Fashion click={this.dialogHandler} app={this} series={exportObject.Landscapes}/>
+              </Route>
+
+
+              <Route path="/About">
+                <About/>
+              </Route>
+
+              <Route path="/Contact">
+                <Contact key="1"/>
+              </Route>
+
+            </Switch>
+
+            {this.dialogVariable}
+          </Router>
         </div>
       </div>
     );

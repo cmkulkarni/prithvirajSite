@@ -10,7 +10,6 @@
 }
 
 .image{
-    width: 85%;
     height: auto;
 }
 
@@ -19,7 +18,7 @@
     padding: 23px 2px;
 }
 
-@media(max-width: 800px){
+@media(max-width: 1000px){
     .ImageColmn{
         flex:48%;
         max-width: 48%;

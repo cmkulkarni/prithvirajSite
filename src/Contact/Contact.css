@@ -7,19 +7,22 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding: 10% 0% 1% 0%;
+    padding: 3% 0% 1% 0%;
 }
 
+.contact p{
+    font-size:  x-large;
+}
 
-.socialMedia{
+.socialMedia_contact{
     margin: 2% 3%;
 }
 .fb{
-    width: 15%;
+    width: 12%;
     padding-left: 2%;
 }
 .insta{
-    width:11%
+    width:9%
 }
 
 .cForm{
@@ -28,7 +31,7 @@
     height: 1100px;
 }
 
-@media(max-width: 800px){
+@media(max-width: 1000px){
     .contact{
         text-align: center;
         max-width: 100%;

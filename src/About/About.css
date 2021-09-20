@@ -1,10 +1,11 @@
 
 .aboutWrapper{
     flex: 64%;
-    height: 85%;
+    height: 75%;
     overflow: scroll;
     max-width: 64%;
-    
+    padding: 8% 0 2% 0;
+    font-family: reg;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -13,6 +14,9 @@
     display: none;
 }
 
+.contactInfo{
+    padding: 2% 0;
+}
 
 .about{
     font-family: reg;
@@ -21,18 +25,16 @@
     text-align: left;
     display: flex;
     height: 70%;   
-    padding: 10% 0% 0% 0%;
-}
-
-.description{
-    padding: 1.20% 3%;
+    padding: 0% 0% 0% 0%;
 }
 
 .author{
-    display: block;
-    height: 52%;
-    padding: 8% 4% 0 0;
+    flex: 25%;
+    padding: 0% 4%;
+}
 
+.description{
+    flex:85%;
 }
 
 .form{
@@ -54,7 +56,7 @@
     height: 1100px;
     padding-top: 3%;
   }
-@media(max-width: 800px){
+@media(max-width: 1000px){
     .aboutWrapper{
         flex:100%;
         max-width: 100%;
@@ -63,6 +65,9 @@
         text-align: center;
         display: block;        
         padding: 8% 5%;
+    }
+    .contactInfo{
+        text-align: center;
     }
     .author{
         display: block;

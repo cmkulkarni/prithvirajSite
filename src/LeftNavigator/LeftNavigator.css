@@ -1,8 +1,8 @@
 .LeftNavigator{
     font-family: lig;
     height: 75%;
-    flex: 33%;
-    max-width: 33%;
+    flex: 30%;
+    max-width: 30%;
     text-align: left;
     padding: 1% 0% 0% 3%;
 }
@@ -19,18 +19,13 @@
 }
 
 .Menu{
-    font-family: lig;
     position: absolute;
-    top: 5%;
-    right: 5%;
-    box-shadow: none;
-    border: none;
-    text-shadow: none;
-    background: none;
-    font-size: x-large;
+    top: 7%;
+    left: 80%;
+    width: 10%;
   }
 
-@media(max-width: 800px){
+@media(max-width: 1000px){
     .LeftNavigator{
         padding: 3%;
         flex:100%;

@@ -22,7 +22,7 @@
   overflow: hidden;
 }
 
-@media(max-width: 800px){
+@media(max-width: 1000px){
   .AppContainer{
     display: block;
     height: auto;

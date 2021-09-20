@@ -18,7 +18,7 @@
     display: flex;
     flex-wrap: wrap;
     float: inherit;   
-    padding: 10% 0% 20% 0%;
+    padding: 7% 0% 20% 0%;
     
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -28,7 +28,7 @@
     display: none;
 }
 
-@media(max-width: 800px){
+@media(max-width: 1000px){
     .fashion{
         padding-top: 10%;
         flex:100%;

@@ -13,9 +13,11 @@ class Slider extends Component {
     images = null;
     viewAll = false;
     lengthOfAllIMages=0;
+    firstLoad = true;
 
     constructor(props){
         super(props);
+        var that = this;
         
         var viewAll = !this.state.viewAll;
         var allImages=[];
@@ -26,20 +28,21 @@ class Slider extends Component {
             label="Single View"
         }
 
-        this.props.series.map(function(v){    
+        this.props.series.forEach(function(v){    
             if(Array.isArray(v))
-                v.map(function(vT){
-                    allImages.push(<img key={imgSeriesIndex++} src={vT}/>)
+                v.forEach(function(vT){
+                    allImages.push(<img alt="Fashion, landscape, people, streets, portraits" onClick={that.getIndexOfTheImage.bind(that,imgSeriesIndex)} src={vT}/>)
                 });
             else
-                allImages.push(<img key={imgSeriesIndex++} src={v}/>)
+                allImages.push(<img alt="Fashion, landscape, people, streets, portraits" onClick={that.getIndexOfTheImage.bind(that,imgSeriesIndex)} key={imgSeriesIndex++} src={v}/>)
         });
-
+        //var indexToShow = this.props.series.indexOf(this.props.src);
         this.setState({
             viewAll: viewAll,
             viewAllContentLength: allImages.length,
             allImages: allImages,
-            viewAllLabel: label
+            viewAllLabel: label,
+            sliderIndex: this.props.index
         });
         this.lengthOfAllIMages = allImages.length
     }
@@ -64,7 +67,7 @@ class Slider extends Component {
         else if(index < 0)
             index = this.props.series.length-1;
 
-        this.images = (<img className={imgStyle} src={this.props.series[index]}/>);
+        this.images = (<img alt="Fashion, landscape, people, streets, portraits" className={imgStyle} src={this.props.series[index]}/>);
 
         if(Array.isArray(this.props.series[index])){
             var imageList = [];
@@ -74,8 +77,8 @@ class Slider extends Component {
             else if(this.props.series[index].length === 3)
                 imgStyle = "triplePhotos";
 
-            this.props.series[index].map(function(v, k){
-                imageList.push((<img className={imgStyle} src={v} key={k}/>));
+            this.props.series[index].forEach(function(v, k){
+                imageList.push((<img alt="Fashion, landscape, people, streets, portraits" className={imgStyle} src={v} key={k}/>));
             });
             this.images = imageList;
         }
@@ -83,6 +86,23 @@ class Slider extends Component {
         this.setState({
             sliderIndex: index
         });
+    }
+
+    getIndexOfTheImage(imgSeriesIndex){
+        console.log(imgSeriesIndex);
+        var itemCounter = -1;
+        var counter = -1;
+        this.props.series.forEach(function(v){
+            if(Array.isArray(v) && itemCounter < imgSeriesIndex){
+                counter++;
+                itemCounter += v.length;
+            }
+            else if(itemCounter < imgSeriesIndex){
+                counter++;
+                itemCounter++;
+            }
+        });
+        this.viewAllClick(counter);
     }
 
     slideClickHandler(clickDirection){
@@ -102,7 +122,7 @@ class Slider extends Component {
         else if(index < 0)
             index = this.props.series.length-1;
 
-        this.images = (<img className={imgStyle} src={this.props.series[index]}/>);
+        this.images = (<img alt="Fashion, landscape, people, streets, portraits" className={imgStyle} src={this.props.series[index]}/>);
 
         if(Array.isArray(this.props.series[index])){
             var imageList = [];
@@ -112,8 +132,8 @@ class Slider extends Component {
             else if(this.props.series[index].length === 3)
                 imgStyle = "triplePhotos";
 
-            this.props.series[index].map(function(v, k){
-                imageList.push((<img className={imgStyle} src={v} key={k}/>));
+            this.props.series[index].forEach(function(v, k){
+                imageList.push((<img alt="Fashion, landscape, people, streets, portraits" className={imgStyle} src={v} key={k}/>));
             });
             this.images = imageList;
         }
@@ -141,27 +161,25 @@ class Slider extends Component {
         }
     }
 
-    viewAllClick(e){        
+    viewAllClick(sliderIndex){        
         var viewAll = !this.state.viewAll;
         var allImages=[];
         var imgSeriesIndex = 0;
-        var label="View All"
+        var label="View All";
+        var that = this;
 
         if(viewAll){
             label="Single View"
-        }
-        else{
 
+            this.props.series.forEach(function(v){    
+                if(Array.isArray(v))
+                    v.forEach(function(vT){
+                        allImages.push(<img alt="Fashion, landscape, people, streets, portraits" onClick={that.getIndexOfTheImage.bind(that, imgSeriesIndex)} key={imgSeriesIndex++} src={vT}/>)
+                    });
+                else
+                    allImages.push(<img alt="Fashion, landscape, people, streets, portraits" onClick={that.getIndexOfTheImage.bind(that, imgSeriesIndex)} key={imgSeriesIndex++} src={v}/>)
+            });
         }
-
-        this.props.series.map(function(v){    
-            if(Array.isArray(v))
-                v.map(function(vT){
-                    allImages.push(<img key={imgSeriesIndex++} src={vT}/>)
-                });
-            else
-                allImages.push(<img key={imgSeriesIndex++} src={v}/>)
-        });
 
         this.images=null;
 
@@ -170,7 +188,7 @@ class Slider extends Component {
             viewAllContentLength: allImages.length,
             allImages: allImages,
             viewAllLabel: label,
-            sliderIndex: 0
+            sliderIndex: sliderIndex
         });
 
 
@@ -180,23 +198,6 @@ class Slider extends Component {
         var imageList = this.images;
         var style = "singlePhoto";
         var content;
-
-        if(imageList === null){
-            if(Array.isArray(this.props.series[this.state.sliderIndex])){
-                imageList = [];
-                if(this.props.series[this.state.sliderIndex].length === 2)
-                    style = "doublePhotos";
-                else if(this.props.series[this.state.sliderIndex].length === 3)
-                    style = "triplePhotos";
-
-                this.props.series[this.state.sliderIndex].map(function(v, k){
-                    imageList.push((<img className={style} src={v} key={k}/>));
-                });
-            }
-            else{                
-                imageList = (<img className={style} src={this.props.series[this.state.sliderIndex]}/>)
-            }
-        }
 
         if(this.state.viewAll){
             var imagesToView = [];
@@ -210,8 +211,27 @@ class Slider extends Component {
                 <div key='2' className='viewAllContent'>{imagesToView}</div>
             ];
         }
-        else{            
+        else{       
+            if(this.firstLoad){
+                this.firstLoad = false;
+                this.setState({sliderIndex: this.props.index});
+            }      
+            if(imageList === null){
+                if(Array.isArray(this.props.series[this.state.sliderIndex])){
+                    imageList = [];
+                    if(this.props.series[this.state.sliderIndex].length === 2)
+                        style = "doublePhotos";
+                    else if(this.props.series[this.state.sliderIndex].length === 3)
+                        style = "triplePhotos";
 
+                    this.props.series[this.state.sliderIndex].forEach(function(v, k){
+                        imageList.push((<img alt="Fashion, landscape, people, streets, portraits" className={style} src={v} key={k}/>));
+                    });
+                }
+                else{                
+                    imageList = (<img alt="Fashion, landscape, people, streets, portraits" className={style} src={this.props.series[this.state.sliderIndex]}/>)
+                }
+            }
             content = [
                 <button key='1' className='leftButton' onClick={this.slideClickHandler.bind(this,"left")}>Previous</button>,
                 <div key='2' className='photosHolder' onClick={this.Click.bind(this)}>{imageList}</div>,
@@ -224,7 +244,7 @@ class Slider extends Component {
             <div className='Slider' >
                 <div className='photos'>
                     <button className='closeButton' onClick={this.props.closeClick}>Close</button>
-                    <button className='viewAllButton' onClick={this.viewAllClick.bind(this)}>{this.state.viewAllLabel}</button>
+                    <button className='viewAllButton' onClick={this.viewAllClick.bind(this, this.state.sliderIndex)}>{this.state.viewAllLabel}</button>
                     {content}
                 </div>
             </div>        

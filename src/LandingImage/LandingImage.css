@@ -12,8 +12,12 @@
 .imageLanding{
     height: 55%;
 }
-
-@media(max-width: 800px){
+@media(width: 1024px){
+    .imageLanding{
+        height: 40%;
+    }
+}
+@media(max-width: 1000px){
     .LandingImage{
         flex:100%;
         max-width: 100%;
