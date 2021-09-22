@@ -9,7 +9,7 @@ const navigatorItem = (props) => {
 	var style={};
 	if(props.currentPage === props.label || props.currentPage === "- "+props.label ){
 		console.log('bold');
-		style = {fontFamily: 'reg'};
+		style = {fontFamily: 'bol'};
 	}
 	else{
 		console.log('lig');

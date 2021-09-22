@@ -1,15 +1,15 @@
 
 @font-face {
-  font-family: lig;
-  src: url(Fonts/Raleway-ExtraLight.ttf);
+  font-family: reg;
+  src: url(Fonts/Futura_SCTOT_Light.ttf);
 }
 @font-face {
-  font-family: reg;
-  src: url(Fonts/Raleway-Regular.ttf);
+  font-family: lig;
+  src: url(Fonts/Futura_Std_Light.ttf);
 }
 @font-face {
   font-family: bol;
-  src: url(Fonts/Raleway-Bold.ttf);
+  src: url(Fonts/BebasNeue-Regular.ttf);
 }
 
 

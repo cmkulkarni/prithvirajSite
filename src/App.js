@@ -28,11 +28,14 @@ class App extends Component {
   dialogVariable = null;
   dialogHandler(obj){
     console.log("Dialog opened!");
+    var src = obj.src;
+    if(obj.src.hasOwnProperty("seriesTopImage"))
+      src = obj.src.seriesTopImage;
     this.dialogVariable = <Slider 
                             closeClick={this.dialogCloseHandler.bind(this,"")} 
                             series={obj.series}
-                            src={obj.src}
-                            index={obj.series.indexOf(obj.src)}
+                            src={src}
+                            index={obj.series.indexOf(src)}
                           />;
     this.setState({
       currentPage: obj.page
@@ -139,13 +142,19 @@ class App extends Component {
       window.location.href = a.join("/");
     }
 
-    exportObject.allImages.forEach(function(img){
-      var image_var = new Image();
-      image_var.onload = function(e){
-          console.log("Image Loaded");
-      };
-      image_var.src = img;
-    });
+    async function loadImagesAsync(){
+      setTimeout(()=>{
+        exportObject.allImages.forEach(function(img){
+          var image_var = new Image();
+          image_var.onload = function(e){
+              console.log("Image Loaded");
+          };
+          image_var.src = img;
+        });
+      }, 1000);
+    }
+
+    loadImagesAsync();
 
     if(window.innerWidth<1000){
       this.leftNavVar=false;
