@@ -17,6 +17,7 @@ import Contact from './Contact/Contact';
 import Slider from './Components/photoSlider/Slider.js';
 
 import exportObject from './ImageSource.js';
+import loadImagesAsync from './imageLoader.js';
 
 class App extends Component {
   state = {
@@ -60,6 +61,8 @@ class App extends Component {
 
 
     if(page === "Portfolio"){
+
+      loadImagesAsync();
       this.contentArea=(<Portfolio click={this.dialogHandler} app={this} images={exportObject.portfolios} width="85%"/>);
       this.setState({
         currentPage: "Portfolio"
@@ -140,18 +143,6 @@ class App extends Component {
     if(a.length>4){
       a.splice(3,1);
       window.location.href = a.join("/");
-    }
-
-    async function loadImagesAsync(){
-      setTimeout(()=>{
-        exportObject.allImages.forEach(function(img){
-          var image_var = new Image();
-          image_var.onload = function(e){
-              console.log("Image Loaded");
-          };
-          image_var.src = img;
-        });
-      }, 1000);
     }
 
     loadImagesAsync();
