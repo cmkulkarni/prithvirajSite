@@ -1,0 +1,21 @@
+.Footer{
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background: rgba(255,255,255,0.5);
+}
+
+.CopyRight{
+	color: rgb(100,100,100);
+	padding-right: 5%;
+}
+
+
+@media(max-height: 800px){
+    
+    .CopyRight{
+    	font-size: xx-small;
+    }
+}

@@ -12,9 +12,9 @@ import LandingImage from './LandingImage/LandingImage';
 import Portfolio from './Portfolio/Portfolio';
 import About from './About/About.js';
 import Fashion from './Fashion/Fashion.js';
-import Contact from './Contact/Contact';
 
 import Slider from './Components/photoSlider/Slider.js';
+import Footer from './Components/Footer/Footer.js';
 
 import exportObject from './ImageSource.js';
 import loadImagesAsync from './imageLoader.js';
@@ -62,7 +62,7 @@ class App extends Component {
 
     if(page === "Portfolio"){
 
-      loadImagesAsync();
+      loadImagesAsync(0, 31);
       this.contentArea=(<Portfolio click={this.dialogHandler} app={this} images={exportObject.portfolios} width="85%"/>);
       this.setState({
         currentPage: "Portfolio"
@@ -74,13 +74,9 @@ class App extends Component {
         currentPage: "About"
       });
     }
-    else if (page === "Contact"){
-      this.contentArea=(<Contact key="1"/>);
-      this.setState({
-        currentPage: "Contact"
-      });
-    }
     else if(page === "- Fashion & People"){
+
+      loadImagesAsync(77, 138);
       this.contentArea=(<Fashion click={this.dialogHandler} app={this} series={exportObject.Images_Fashion}/>);
       this.setState({
         currentPage: "- Fashion & People"
@@ -94,13 +90,15 @@ class App extends Component {
     }
     else if(page === "- Landscapes & Streets"){
       
+      loadImagesAsync(138);
       this.contentArea=(<Fashion click={this.dialogHandler} app={this} series={exportObject.Landscapes}/>);
       this.setState({
         currentPage: "- Landscapes & Streets"
       }); 
     }
     else if(page === "Work"){
-      //console.log(exportObject);
+
+      loadImagesAsync(32, 77);
       this.setState({
         currentPage: "Work"
       });
@@ -145,7 +143,7 @@ class App extends Component {
       window.location.href = a.join("/");
     }
 
-    loadImagesAsync();
+    //loadImagesAsync(0, 31);
 
     if(window.innerWidth<1000){
       this.leftNavVar=false;
@@ -168,6 +166,7 @@ class App extends Component {
 
     return (
       <div style={{width:this.width, height: this.height}} className="App">
+
         <div className="AppContainer" >
           <Router>
             {this.LeftNavigation}
@@ -203,15 +202,13 @@ class App extends Component {
                 <About/>
               </Route>
 
-              <Route path="/Contact">
-                <Contact key="1"/>
-              </Route>
-
+              
             </Switch>
 
             {this.dialogVariable}
           </Router>
         </div>
+        <Footer />
       </div>
     );
   }

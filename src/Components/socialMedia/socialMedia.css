@@ -1,0 +1,21 @@
+
+.socialMedia{
+    flex-wrap: wrap;
+	display: flex;
+	align-items: center;
+	padding-left: 10%;
+}
+.fbFooter{
+	height: 35px;
+}
+.instaFooter{
+	height: 35px;
+	padding-right: 50%;
+}
+
+
+@media(max-width: 1000px){
+    .socialMedia{
+    }
+}
+

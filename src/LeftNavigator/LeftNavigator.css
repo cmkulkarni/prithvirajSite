@@ -7,17 +7,6 @@
     padding: 1% 0% 0% 3%;
 }
 
-.socialMedia{
-    margin: 20% 3%;
-}
-.fb{
-    width: 15%;
-    padding-left: 2%;
-}
-.insta{
-    width:11%
-}
-
 .Menu{
     position: absolute;
     top: 7%;
@@ -32,9 +21,5 @@
         max-width: 100%;
         display: block;
         float: inherit;
-    }
-    .socialMedia{
-        text-align: center;
-        margin: 20% 3% 10% 3%;
     }
 }
