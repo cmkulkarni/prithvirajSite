@@ -20,7 +20,9 @@ const about =(props) => {
                     <p>Photography for me is about creating thought provoking pictures and trying to get the best out of people.</p>
                     <p>There is no better feeling than creating a visual that excites me and allows memories to be made in the process of it.</p>
                 </div>
-                <img alt="prithviraj chavan photographer, Fashion, landscape, people, streets, portraits" className="author" src={prithvi}></img>
+                <div className="author" >
+                    <img alt="prithviraj chavan photographer, Fashion, landscape, people, streets, portraits" src={prithvi}></img>
+                </div> 
             </div>        
 
             <div className="contactInfo">

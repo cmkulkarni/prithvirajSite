@@ -20,21 +20,25 @@
 
 .about{
     font-family: lig;
-    max-width: 100%;
-    flex: 100%;
     text-align: left;
     display: flex;
     height: 70%;   
-    padding: 0% 0% 0% 0%;
 }
 
 .author{
-    flex: 25%;
-    padding: 0% 4%;
+    flex-grow: 1;
+    flex: 30%;
+    width: 30%;
+}
+
+.author img{
+    width: 100%;
 }
 
 .description{
-    flex:85%;
+    flex-grow: 8;
+    flex: 70%;
+    width: 70%;
 }
 
 .form{
@@ -69,12 +73,13 @@
     .contactInfo{
         text-align: center;
     }
-    .author{
+    .author, .description{
         display: block;
-        width: 90%;
-        padding: 2% 5%;
+        width: 80%;
+        padding: 2% 10%;
     
     }
+
     .contactForm{
       height: 1200px;
     }

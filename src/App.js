@@ -140,7 +140,7 @@ class App extends Component {
     var a = window.location.href.split("/");
     if(a.length>4){
       a.splice(3,1);
-      window.location.href = a.join("/");
+      //window.location.href = a.join("/");
     }
 
     //loadImagesAsync(0, 31);
