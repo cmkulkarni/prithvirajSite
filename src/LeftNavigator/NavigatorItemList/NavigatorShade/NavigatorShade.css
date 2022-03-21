@@ -1,7 +1,6 @@
 .NavigatorShade{
-    padding-left: 5%;
     font-size: xx-large;
-    padding-bottom: 4%;
+    padding: 6%;
 }
 
 .NavigatorShade:hover{

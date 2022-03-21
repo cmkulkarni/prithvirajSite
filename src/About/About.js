@@ -22,13 +22,12 @@ const about =(props) => {
                 </div>
                 <div className="author" >
                     <img alt="prithviraj chavan photographer, Fashion, landscape, people, streets, portraits" src={prithvi}></img>
+                    <div className="contactInfo">
+                        <p key='1'>Contact No.: 9665007082</p>
+                        <p key='2'>Mail Id.: contact.prithvirajchavan@gmail.com</p>
+                    </div> 
                 </div> 
             </div>        
-
-            <div className="contactInfo">
-                <p key='1'>Contact No.: 9665007082</p>
-                <p key='2'>Mail Id.: contact.prithvirajchavan@gmail.com</p>
-            </div> 
         </div>
     );
 };
