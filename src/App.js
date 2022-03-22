@@ -138,9 +138,9 @@ class App extends Component {
     this.width = window.innerWidth-20;
 
     var a = window.location.href.split("/");
-    if(a.length>4){
-      a.splice(3,1);
-      //window.location.href = a.join("/");
+    if(a.length>5){
+      a.splice(4,1);
+      window.location.href = a.join("/");
     }
 
     //loadImagesAsync(0, 31);
