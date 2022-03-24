@@ -30,13 +30,22 @@ class App extends Component {
   dialogHandler(obj){
     console.log("Dialog opened!");
     var src = obj.src;
+    var index = 0;
     if(obj.src.hasOwnProperty("seriesTopImage"))
       src = obj.src.seriesTopImage;
+
+    obj.series.forEach(function(imageOfSeries,indexOfArray){
+      if(Array.isArray(imageOfSeries) && imageOfSeries.includes(src))
+        index = indexOfArray;
+      else if(src === imageOfSeries)
+        index = indexOfArray;
+        
+    });
     this.dialogVariable = <Slider 
                             closeClick={this.dialogCloseHandler.bind(this,"")} 
                             series={obj.series}
                             src={src}
-                            index={obj.series.indexOf(src)}
+                            index={index}
                           />;
     this.setState({
       currentPage: obj.page
@@ -76,13 +85,31 @@ class App extends Component {
     }
     else if(page === "- Fashion & People"){
 
-      loadImagesAsync(77, 138);
+      loadImagesAsync(90, 151);
       this.contentArea=(<Fashion click={this.dialogHandler} app={this} series={exportObject.Images_Fashion}/>);
       this.setState({
         currentPage: "- Fashion & People"
       }); 
     }
+    else if(page === "- Food"){
+
+      loadImagesAsync(278);
+      this.contentArea=(<Portfolio click={this.dialogHandler} app={this} images={exportObject.Food[0].array} width="60%"/>);
+      this.setState({
+        currentPage: "- Food"
+      }); 
+    }
+    else if(page === "- Still Life & Products"){
+
+      loadImagesAsync(278);
+      this.contentArea=(<Portfolio click={this.dialogHandler} app={this} images={exportObject.StillLifeAndProduct[0].array} width="60%"/>);
+      this.setState({
+        currentPage: "- Still Life & Products"
+      }); 
+    }
     else if(page === "- Portraits"){
+      
+      loadImagesAsync(32,90);
       this.contentArea=(<Portfolio click={this.dialogHandler} app={this} images={exportObject.Portraits[0].array} width="60%"/>);
       this.setState({
         currentPage: "- Portraits"
@@ -90,7 +117,7 @@ class App extends Component {
     }
     else if(page === "- Landscapes & Streets"){
       
-      loadImagesAsync(138);
+      loadImagesAsync(151, 291);
       this.contentArea=(<Fashion click={this.dialogHandler} app={this} series={exportObject.Landscapes}/>);
       this.setState({
         currentPage: "- Landscapes & Streets"
@@ -183,6 +210,14 @@ class App extends Component {
 
               <Route path="/Work">
                 {this.contentArea}
+              </Route>
+
+              <Route path="/Food">
+                <Portfolio click={this.dialogHandler} app={this} images={exportObject.Food[0].array} width="60%"/>
+              </Route>
+
+              <Route path="/StillLifeAndProducts">
+                <Portfolio click={this.dialogHandler} app={this} images={exportObject.StillLifeAndProduct[0].array} width="60%"/>
               </Route>
 
               <Route path="/FashionAndPeople">

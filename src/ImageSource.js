@@ -257,6 +257,55 @@ import portraite16 from './Resource/portraits/resized/16.jpg';
 import portraite17 from './Resource/portraits/resized/17.jpg';
 import portraite18 from './Resource/portraits/resized/18.jpg';
 import portraite19 from './Resource/portraits/resized/19.jpg';
+import portraite20o1 from './Resource/portraits/resized/20 (1).jpg';
+import portraite20o2 from './Resource/portraits/resized/20 (2).jpg';
+import portraite20o3 from './Resource/portraits/resized/20 (3).jpg';
+import portraite21o1 from './Resource/portraits/resized/21 (1).jpg';
+import portraite21o2 from './Resource/portraits/resized/21 (2).jpg';
+import portraite21o3 from './Resource/portraits/resized/21 (3).jpg';
+import portraite22o1 from './Resource/portraits/resized/22 (1).jpg';
+import portraite22o2 from './Resource/portraits/resized/22 (2).jpg';
+import portraite23o1 from './Resource/portraits/resized/23 (1).jpg';
+import portraite23o2 from './Resource/portraits/resized/23 (2).jpg';
+import portraite24o1 from './Resource/portraits/resized/24 (1).jpg';
+import portraite24o2 from './Resource/portraits/resized/24 (2).jpg';
+import portraite25 from './Resource/portraits/resized/25.jpg';
+
+//Food
+import Food1 from './Resource/food/1.jpg';
+import Food2 from './Resource/food/2.jpg';
+import Food3o1 from './Resource/food/3 (1).jpg';
+import Food3o2 from './Resource/food/3 (2).jpg';
+import Food5o1 from './Resource/food/5 (1).jpg';
+import Food5o2 from './Resource/food/5 (2).jpg';
+import Food5o3 from './Resource/food/5 (3).jpg';
+import Food6 from './Resource/food/6.jpg';
+import Food7o1 from './Resource/food/7 (1).jpg';
+import Food7o2 from './Resource/food/7 (2).jpg';
+import Food8 from './Resource/food/8.jpg';
+import Food9 from './Resource/food/9.jpg';
+import Food10 from './Resource/food/10.jpg';
+import Food11 from './Resource/food/11.jpg';
+import Food12o1 from './Resource/food/12 (1).jpg';
+import Food12o2 from './Resource/food/12 (2).jpg';
+import Food13o1 from './Resource/food/13 (1).jpg';
+import Food13o2 from './Resource/food/13 (2).jpg';
+import Food14o1 from './Resource/food/14 (1).jpg';
+import Food14o2 from './Resource/food/14 (2).jpg';
+import Food14o3 from './Resource/food/14 (3).jpg';
+import Food15o1 from './Resource/food/15 (1).jpg';
+import Food15o2 from './Resource/food/15 (2).jpg';
+import Food15o3 from './Resource/food/15 (3).jpg';
+import Food16o1 from './Resource/food/16 (1).jpg';
+import Food16o2 from './Resource/food/16 (2).jpg';
+import Food17o1 from './Resource/food/17 (1).jpg';
+import Food17o2 from './Resource/food/17 (2).jpg';
+import Food17o3 from './Resource/food/17(3).jpg';
+import Food18o1 from './Resource/food/18 (1).jpg';
+import Food18o2 from './Resource/food/18 (2).jpg';
+import Food19o1 from './Resource/food/19 (1).jpg';
+import Food19o2 from './Resource/food/19 (2).jpg';
+import Food20 from './Resource/food/20.jpg';
 
 //Landscape and streets
 import kodaikanale1 from './Resource/landscapes_&_streets/kodaikanal/resized/1.jpg';
@@ -302,10 +351,65 @@ import TheNorthe11o2 from './Resource/landscapes_&_streets/The_North/resized/11(
 import TheNorthe11o1 from './Resource/landscapes_&_streets/The_North/resized/11(2).jpg';
 import TheNorthe12 from './Resource/landscapes_&_streets/The_North/resized/12.jpg';
 
+
+import stillLife1o1 from './Resource/still_life_&_products/1(1).jpg';
+import stillLife1o2 from './Resource/still_life_&_products/1(2).jpg';
+import stillLife2 from './Resource/still_life_&_products/2.jpg';
+import stillLife3 from './Resource/still_life_&_products/3.jpg';
+import stillLife4 from './Resource/still_life_&_products/4.jpg';
+import stillLife5 from './Resource/still_life_&_products/5.jpg';
+import stillLife6 from './Resource/still_life_&_products/6.jpg';
+import stillLife7 from './Resource/still_life_&_products/7.jpg';
+import stillLife8 from './Resource/still_life_&_products/8.jpg';
+import stillLife9 from './Resource/still_life_&_products/9.jpg';
+import stillLife10 from './Resource/still_life_&_products/10.jpg';
+import stillLife11o1 from './Resource/still_life_&_products/11 (1).jpg';
+import stillLife11o2 from './Resource/still_life_&_products/11 (2).jpg';
+import stillLife12 from './Resource/still_life_&_products/12.jpg';
+import stillLife13 from './Resource/still_life_&_products/13.jpg';
+
+import stillsInTimeOfMotion1o1 from './Resource/Stills_in_the_time_of_motion/1 (1).jpg';
+import stillsInTimeOfMotion1o2 from './Resource/Stills_in_the_time_of_motion/1(2).jpg';
+import stillsInTimeOfMotion1o3 from './Resource/Stills_in_the_time_of_motion/1 (3).jpg';
+import stillsInTimeOfMotion2o1 from './Resource/Stills_in_the_time_of_motion/2 (1).jpg';
+import stillsInTimeOfMotion2o2 from './Resource/Stills_in_the_time_of_motion/2 (2) cover.jpg';
+import stillsInTimeOfMotion2o3 from './Resource/Stills_in_the_time_of_motion/2 (3).jpg';
+import stillsInTimeOfMotion3o1 from './Resource/Stills_in_the_time_of_motion/3 (1).jpg';
+import stillsInTimeOfMotion3o2 from './Resource/Stills_in_the_time_of_motion/3 (2).jpg';
+import stillsInTimeOfMotion3o3 from './Resource/Stills_in_the_time_of_motion/3 (3).jpg';
+import stillsInTimeOfMotion4o1 from './Resource/Stills_in_the_time_of_motion/4 (1).jpg';
+import stillsInTimeOfMotion4o2 from './Resource/Stills_in_the_time_of_motion/4 (2).jpg';
+
+import sugar1 from './Resource/sugar/1.jpg';
+import sugar2 from './Resource/sugar/2 cover.jpg';
+import sugar3 from './Resource/sugar/3.jpg';
+
+import yellowTwo1o1 from './Resource/Yellow 2/1 (1).jpg';
+import yellowTwo1o2 from './Resource/Yellow 2/1 (2).jpg';
+import yellowTwo1o3 from './Resource/Yellow 2/1 (3).jpg';
+import yellowTwo2o1 from './Resource/Yellow 2/2 (1).jpg';
+import yellowTwo2o2 from './Resource/Yellow 2/2 (2).jpg';
+import yellowTwo2o3 from './Resource/Yellow 2/2 (3).jpg';
+import yellowTwo3o1 from './Resource/Yellow 2/3 (1).jpg';
+import yellowTwo3o2 from './Resource/Yellow 2/3 (2).jpg';
+import yellowTwo4o1 from './Resource/Yellow 2/4 (1).jpg';
+import yellowTwo4o2 from './Resource/Yellow 2/4 (2).jpg';
+import yellowTwo4o3 from './Resource/Yellow 2/4 (3).jpg';
+
 var Images_Fashion = [
+    {
+        series: [[stillsInTimeOfMotion1o1, stillsInTimeOfMotion1o2,stillsInTimeOfMotion1o3], [stillsInTimeOfMotion2o1,stillsInTimeOfMotion2o2,stillsInTimeOfMotion2o3], [stillsInTimeOfMotion3o1,stillsInTimeOfMotion3o2,stillsInTimeOfMotion3o3],[stillsInTimeOfMotion4o1,stillsInTimeOfMotion4o2]],
+        description: "Stills In the Time of Motion",
+        cover:stillsInTimeOfMotion2o2
+    },
     {
         series: [Intertwined1, [Intertwined2o1, Intertwined2o2], Intertwined3, Intertwined4],
         description: "Intertwined"
+    },
+    {
+        series: [sugar1,sugar2,sugar3],
+        description: "Sugar",
+        cover:sugar2
     },
     {
         series: [arka1, [arka2o1, arka2o2], [arka3o1, arka3o2, arka3o3], arka4, [arka5o1, arka5o2], [arka6o1, arka6o2], arka7, [arka8o1, arka8o2], [arka9o1, arka9o2], [arka10o1, arka10o2], [arka11o1, arka11o2], [arka12o1, arka12o2], [arka13o1, arka13o2], [arka14o1, arka14o2]],
@@ -365,6 +469,26 @@ var Images_Fashion = [
     {
         series: [[yellowe1o1, yellowe1o2], yellowe2, yellowe3, [yellowe4o1, yellowe4o2], [yellowe5o1, yellowe5o2], yellowe6, yellowe7],
         description: "Yellow"
+    },
+    {
+        series: [[yellowTwo1o1,yellowTwo1o2,yellowTwo1o3],[yellowTwo2o1,yellowTwo2o2,yellowTwo2o3],[yellowTwo3o1,yellowTwo3o2],[yellowTwo4o1,yellowTwo4o2,yellowTwo4o3]],
+        description: "Yellow Two"
+    }
+];
+
+var Food = [
+    {
+        series: [Food1, Food2, [Food3o1, Food3o2],[Food5o1, Food5o2, Food5o3], Food6, [Food7o1, Food7o2], Food8, Food9, Food10, Food11, [Food12o1, Food12o2], [Food13o1, Food13o2], [Food14o1, Food14o2, Food14o3], [Food15o1, Food15o2, Food15o3], [Food16o1, Food16o2], [Food17o1, Food17o2, Food17o3], [Food18o1, Food18o2], [Food19o1, Food19o2], Food20],
+        array: [[Food1, Food2, Food3o1, Food3o2,Food5o1, Food5o2, Food5o3, Food6, Food7o1, Food7o2, Food8, Food9, Food10, Food11, Food12o1, Food12o2, Food13o1, Food13o2, Food14o1], [Food14o2, Food14o3, Food15o1, Food15o2, Food15o3, Food16o1, Food16o2, Food17o1, Food17o2, Food17o3, Food18o1, Food18o2, Food19o1, Food19o2, Food20]],
+        description: "Food"
+    }
+];
+
+var StillLifeAndProduct = [
+    {
+        series: [[stillLife1o1, stillLife1o2], stillLife2, stillLife3, stillLife4, stillLife5, stillLife6, stillLife7,stillLife8,stillLife9,stillLife10,[stillLife11o1,stillLife11o2],stillLife12,stillLife13],
+        array: [[stillLife1o1, stillLife1o2, stillLife2, stillLife3, stillLife4, stillLife5], [stillLife6, stillLife7,stillLife8,stillLife9,stillLife10,stillLife11o1,stillLife11o2,stillLife12,stillLife13]],
+        description: "Still Life & Products"
     }
 ];
 
@@ -373,8 +497,8 @@ var portfolioArray2 = [img10, img11, img12, img13, img14, img15, img16, img17, i
 
 var Portraits = [
     {
-        series: [[portraite1o1,portraite1o2],[portraite2o1,portraite2o2],[portraite3o1,portraite3o2],[portraite4o1,portraite4o2], [portraite5o1, portraite502], [portraite6o1, portraite6o2], [portraite7o1, portraite7o2], [portraite8o1, portraite8o2], [portraite9o1,portraite9o2], [portraite10o1, portraite10o2], portraite11, portraite12, portraite13, portraite14, portraite15, portraite16, portraite17, portraite18],
-        array: [[portraite1o1,portraite2o1,portraite3o1,portraite4o1,portraite5o1,portraite6o1,portraite7o1,portraite8o1,portraite9o1,portraite10o1,portraite11,portraite13,portraite15,portraite17],[portraite1o2, portraite2o2,portraite3o2,portraite4o2,portraite502,portraite6o2,portraite7o2,portraite8o2,portraite9o2,portraite10o2,portraite12,portraite14,portraite16,portraite18, portraite19]],
+        series: [[portraite1o1,portraite1o2],[portraite2o1,portraite2o2],[portraite3o1,portraite3o2],[portraite4o1,portraite4o2], [portraite5o1, portraite502], [portraite6o1, portraite6o2], [portraite7o1, portraite7o2], [portraite8o1, portraite8o2], [portraite9o1,portraite9o2], [portraite10o1, portraite10o2], portraite11, portraite12, portraite13, portraite14, portraite15, portraite16, portraite17, portraite18, portraite19, [portraite20o1, portraite20o2,portraite20o3], [portraite21o1,portraite21o2,portraite21o3], [portraite22o1,portraite22o2],[portraite23o1,portraite23o2],[portraite24o1,portraite24o2],portraite25],
+        array: [[portraite20o1,portraite20o2,portraite20o3,portraite21o1,portraite21o2,portraite21o3,portraite22o1,portraite22o2,portraite1o1,portraite2o1,portraite3o1,portraite4o1,portraite5o1,portraite6o1,portraite7o1,portraite8o1,portraite9o1,portraite10o1,portraite11,portraite13],[portraite23o1,portraite23o2,portraite24o1,portraite24o2,portraite25,portraite15,portraite17,portraite1o2, portraite2o2,portraite3o2,portraite4o2,portraite502,portraite6o2,portraite7o2,portraite8o2,portraite9o2,portraite10o2,portraite12,portraite14,portraite16,portraite18, portraite19]],
         description: "Portraits"
     }
 ];
@@ -404,6 +528,7 @@ var allImagesForPreload = [
 
 	portraite1o1,portraite1o2  ,  portraite2o1,portraite2o2  ,  portraite3o1,portraite3o2  ,  portraite4o1,portraite4o2  ,   portraite5o1, portraite502  ,   portraite6o1, portraite6o2  ,   portraite7o1, portraite7o2  ,   portraite8o1, portraite8o2  ,   portraite9o1,portraite9o2  ,   portraite10o1, portraite10o2  , portraite11, portraite12, portraite13, portraite14, portraite15, portraite16, portraite17, portraite18,
 	portraite1o1,portraite2o1,portraite3o1,portraite4o1,portraite5o1,portraite6o1,portraite7o1,portraite8o1,portraite9o1,portraite10o1,portraite11,portraite13,portraite15,portraite17  ,  portraite1o2, portraite2o2,portraite3o2,portraite4o2,portraite502,portraite6o2,portraite7o2,portraite8o2,portraite9o2,portraite10o2,portraite12,portraite14,portraite16,portraite18, portraite19,
+    portraite20o1,portraite20o2,portraite20o3,portraite21o1,portraite21o2,portraite21o3,portraite22o1,portraite22o2,portraite23o1,portraite23o2,portraite24o1,portraite24o2,portraite25,
 
 	Intertwined1, arka1, FaceMag21e4o2, Elegancee1, LenaCover, moveArtCover, shotOnFilme1, summerEdditionCover, tie1, valarMurghulise1, VallomaByTwinklee1o1, walkWithMee1, yellowe1o1, 
 	kodaikanale1, Patterne1, BigBadOceane1, TheNorthe1, 
@@ -426,15 +551,22 @@ var allImagesForPreload = [
 	kodaikanale2, kodaikanale3, kodaikanale4, kodaikanale5, kodaikanale6,
 	Patterne2, Patterne3, Patterne4, Patterne5,
 	BigBadOceane2, BigBadOceane3, BigBadOceane4, BigBadOceane5, BigBadOceane6,   BigBadOceane7o1, BigBadOceane7o2  , BigBadOceane8, BigBadOceane9, BigBadOceane10,   BigBadOceane11o1, BigBadOceane11o2  ,   BigBadOceane12o1, BigBadOceane12o2,
-	TheNorthe2, TheNorthe3, TheNorthe4, TheNorthe5,TheNorthe6, TheNorthe7, TheNorthe8, TheNorthe9, TheNorthe10,   TheNorthe11o1, TheNorthe11o2  , TheNorthe12
+	TheNorthe2, TheNorthe3, TheNorthe4, TheNorthe5,TheNorthe6, TheNorthe7, TheNorthe8, TheNorthe9, TheNorthe10,   TheNorthe11o1, TheNorthe11o2  , TheNorthe12,
+
+    Food1, Food2, Food3o1, Food3o2,Food5o1, Food5o2, Food5o3, Food6, Food7o1, Food7o2, Food8, Food9, Food10, Food11, Food12o1, Food12o2, Food13o1, Food13o2, Food14o1, Food14o2, Food14o3, Food15o1, Food15o2, Food15o3, Food16o1, Food16o2, Food17o1, Food17o2, Food17o3, Food18o1, Food18o2, Food19o1, Food19o2, Food20,
+
+    stillLife1o1, stillLife1o2, stillLife2, stillLife3, stillLife4, stillLife5, stillLife6, stillLife7,stillLife8,stillLife9,stillLife10,stillLife11o1,stillLife11o2,stillLife12,stillLife13
 ];
 
 var exportObject = {
     portfolios: [portfolioArray1, portfolioArray2],
     Images_Fashion: Images_Fashion,
+    Food: Food,
+    StillLifeAndProduct:StillLifeAndProduct,
     Portraits: Portraits,
     Landscapes: Landscapes,
     allImages: allImagesForPreload
 };
 
 export default exportObject;
+

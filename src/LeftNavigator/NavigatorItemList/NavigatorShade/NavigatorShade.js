@@ -29,8 +29,10 @@ class navigatorShade extends Component {
         else{
             this.shade = [
                             <NavigatorItem to="FashionAndPeople" key='1' label="- Fashion & People" click={this.props.click} currentPage={this.props.currentPage}/>,
-                            <NavigatorItem to="Portraits" key='2' label="- Portraits" click={this.props.click} currentPage={this.props.currentPage}/>,
-                            <NavigatorItem to="LandscapesAndStreets" key='3' label="- Landscapes & Streets" click={this.props.click} currentPage={this.props.currentPage}/>,
+                            <NavigatorItem to="Food" key='2' label="- Food" click={this.props.click} currentPage={this.props.currentPage}/>,
+                            <NavigatorItem to="StillLifeAndProducts" key='3' label="- Still Life & Products" click={this.props.click} currentPage={this.props.currentPage}/>,
+                            <NavigatorItem to="Portraits" key='4' label="- Portraits" click={this.props.click} currentPage={this.props.currentPage}/>,
+                            <NavigatorItem to="LandscapesAndStreets" key='5' label="- Landscapes & Streets" click={this.props.click} currentPage={this.props.currentPage}/>,
             ];
         }
 

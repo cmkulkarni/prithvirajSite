@@ -7,11 +7,14 @@ import image4 from './Resources/4.jpg';
 import image5 from './Resources/5.jpg';
 import image6 from './Resources/6.jpg';
 import image7 from './Resources/7.jpg';
+import image8 from './Resources/8.jpg';
+import image9 from './Resources/9.jpg';
+import image10 from './Resources/10.jpg';
 
 class LandingImage extends Component{
     state={index : 0};
-    maxIndex = 7
-    slideImages = [image1,image2,image3,image4,image5,image6,image7]
+    maxIndex = 10
+    slideImages = [image1,image2,image3,image8,image4,image9,image5,image10,image6,image7]
     display=0;
     corousel = () =>{
         var index=this.state.index;
@@ -20,7 +23,7 @@ class LandingImage extends Component{
             index = 0;
         //console.log("corousel"+index);
         this.setState({index: index});
-        setTimeout(this.corousel,3000);
+        setTimeout(this.corousel,2000);
     }
 
     constructor(props){
