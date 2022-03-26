@@ -479,7 +479,7 @@ var Images_Fashion = [
 var Food = [
     {
         series: [Food1, Food2, [Food3o1, Food3o2],[Food5o1, Food5o2, Food5o3], Food6, [Food7o1, Food7o2], Food8, Food9, Food10, Food11, [Food12o1, Food12o2], [Food13o1, Food13o2], [Food14o1, Food14o2, Food14o3], [Food15o1, Food15o2, Food15o3], [Food16o1, Food16o2], [Food17o1, Food17o2, Food17o3], [Food18o1, Food18o2], [Food19o1, Food19o2], Food20],
-        array: [[Food1, Food2, Food3o1, Food3o2,Food5o1, Food5o2, Food5o3, Food6, Food7o1, Food7o2, Food8, Food9, Food10, Food11, Food12o1, Food12o2, Food13o1, Food13o2, Food14o1], [Food14o2, Food14o3, Food15o1, Food15o2, Food15o3, Food16o1, Food16o2, Food17o1, Food17o2, Food17o3, Food18o1, Food18o2, Food19o1, Food19o2, Food20]],
+        array: [[Food1, Food3o1, Food5o1, Food5o3, Food7o1, Food8, Food10, Food12o1, Food13o1, Food14o1, Food14o3, Food15o2, Food16o1, Food17o1, Food17o3, Food18o2, Food19o2] ,[Food2, Food3o2, Food5o2, Food6, Food7o2, Food9, Food11, Food12o2, Food13o2, Food14o2, Food15o1, Food15o3, Food16o2, Food17o2, Food18o1, Food19o1, Food20]],
         description: "Food"
     }
 ];
